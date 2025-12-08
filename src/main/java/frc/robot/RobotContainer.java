@@ -78,6 +78,7 @@ public class RobotContainer {
      * EX:
      * m_chooser.addOption("YOUR AUTO NAME", new YourAutonomous(m_drivetrain));
     */
+   // m_chooser.addOption();
 
     SmartDashboard.putData(m_chooser);
   }
