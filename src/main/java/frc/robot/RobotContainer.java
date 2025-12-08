@@ -74,14 +74,13 @@ public class RobotContainer {
         .onFalse(new PrintCommand("Button A Released"));
 
     // Setup SmartDashboard options
-    m_chooser.setDefaultOption("Example Auton", new ExampleAuton(m_drivetrain));
     
     /* ROOKIES, ADD YOUR AUTONS HERE!
      * EX:
      * m_chooser.addOption("YOUR AUTO NAME", new YourAutonomous(m_drivetrain));
     */
    m_chooser.addOption("Blue Top", new Auton1(m_drivetrain));
-   m_chooser.addOption("Blue Bottom", new Auton2(m_drivetrain));
+   m_chooser.setDefaultOption("Blue Bottom", new Auton2(m_drivetrain));
 
     SmartDashboard.putData(m_chooser);
   }
