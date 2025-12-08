@@ -9,6 +9,6 @@ public class YourAutonomous extends SequentialCommandGroup {
             /* ROOKIES, INSERT DRIVE COMMANDS HERE TO CREATE YOUR AUTON! 
              * EX: new DriveTime(parameter, parameter, parameter)
             */
-        );
-    }
+            );
+        }
 }

@@ -15,6 +15,8 @@ import edu.wpi.first.wpilibj2.command.Command;
 import edu.wpi.first.wpilibj2.command.PrintCommand;
 import edu.wpi.first.wpilibj2.command.button.Trigger;
 import frc.robot.autons.ExampleAuton;
+import frc.robot.autons.Auton1;
+import frc.robot.autons.Auton2;
 import frc.robot.driveCommands.ArcadeDrive;
 import frc.robot.driveCommands.TankDrive;
 import frc.robot.subsystems.Drivetrain;
@@ -62,8 +64,8 @@ public class RobotContainer {
   private void configureButtonBindings() {
     // Default command is arcade drive. This will run unless another command
     // is scheduled over it.
-    // m_drivetrain.setDefaultCommand(getArcadeDriveCommand());
-    m_drivetrain.setDefaultCommand(getTankDriveCommand());
+    m_drivetrain.setDefaultCommand(getArcadeDriveCommand());
+    // m_drivetrain.setDefaultCommand(getTankDriveCommand());
 
     // Example of how to use the onboard IO
     Trigger onboardButtonA = new Trigger(m_onboardIO::getButtonAPressed);
@@ -78,7 +80,8 @@ public class RobotContainer {
      * EX:
      * m_chooser.addOption("YOUR AUTO NAME", new YourAutonomous(m_drivetrain));
     */
-   // m_chooser.addOption();
+   m_chooser.addOption("Blue Top", new Auton1(m_drivetrain));
+   m_chooser.addOption("Blue Bottom", new Auton2(m_drivetrain));
 
     SmartDashboard.putData(m_chooser);
   }
