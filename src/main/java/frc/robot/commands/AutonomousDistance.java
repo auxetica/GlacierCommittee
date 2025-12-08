@@ -17,7 +17,7 @@ public class AutonomousDistance extends SequentialCommandGroup {
    */
   public AutonomousDistance(Drivetrain drivetrain) {
     addCommands(
-      new DriveArc(0.5, 1.0, drivetrain, 10)
+      new DriveTurn(0.5, 90, 5, drivetrain)
     );
   }
 }
