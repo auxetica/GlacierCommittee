@@ -79,8 +79,8 @@ public class RobotContainer {
      * EX:
      * m_chooser.addOption("YOUR AUTO NAME", new YourAutonomous(m_drivetrain));
     */
-   m_chooser.addOption("Blue Top", new Auton1(m_drivetrain));
-   m_chooser.setDefaultOption("Blue Bottom", new Auton2(m_drivetrain));
+   m_chooser.setDefaultOption("Blue Top", new Auton1(m_drivetrain));
+   m_chooser.addOption("Blue Bottom", new Auton2(m_drivetrain));
 
     SmartDashboard.putData(m_chooser);
   }
