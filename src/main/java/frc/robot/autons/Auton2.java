@@ -10,8 +10,14 @@ public class Auton2 extends SequentialCommandGroup {
             /* ROOKIES, INSERT DRIVE COMMANDS HERE TO CREATE YOUR AUTON! 
              * EX: new DriveTime(parameter, parameter, parameter)
             */
-            new DriveDistance(0.5, 17, drivetrain),
-            new TurnDegrees(0.5, 250, drivetrain)
+            // blue bottom
+            new DriveDistance(0.5, 16, drivetrain),
+            new TurnDegrees(0.5, 250, drivetrain),
+            new DriveDistance(0.5, 11, drivetrain),
+            new TurnDegrees(0.5, 60, drivetrain),
+            new DriveDistance(0.5, 15, drivetrain),
+            new TurnDegrees(0.5, 70, drivetrain),
+            new DriveDistance(0.5, 10, drivetrain)
         );
     }
 }
