@@ -38,7 +38,7 @@ public class TurnDegrees extends Command {
   // Called every time the scheduler runs while the command is scheduled.
   @Override
   public void execute() {
-    m_drive.arcadeDrive(0, m_speed);
+    m_drive.arcadeDrive(0, Math.copySign(Math.abs(m_speed), m_degrees));
   }
 
   // Called once the command ends or is interrupted.
@@ -59,7 +59,7 @@ public class TurnDegrees extends Command {
      */
     double inchPerDegree = Math.PI * 5.551 / 360;
     // Compare distance travelled from start to distance based on degree turn
-    return getAverageTurningDistance() >= (inchPerDegree * m_degrees);
+    return getAverageTurningDistance() >= Math.abs(inchPerDegree * m_degrees);
   }
 
   private double getAverageTurningDistance() {
