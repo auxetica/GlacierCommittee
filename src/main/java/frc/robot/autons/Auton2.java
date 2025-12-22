@@ -14,11 +14,13 @@ public class Auton2 extends SequentialCommandGroup {
             // blue bottom (beaker)
             new DriveDistance(0.5, 16, drivetrain),
             new TurnDegrees(0.5, -90+turnOffset, drivetrain),
-            new DriveDistance(0.5, 11, drivetrain),
+            new DriveDistance(0.5, 9, drivetrain),
             new TurnDegrees(0.5, 80-turnOffset, drivetrain),
             new DriveDistance(0.5, 15, drivetrain),
             new TurnDegrees(0.5, 90-turnOffset, drivetrain),
-            new DriveDistance(0.5, 10, drivetrain)
+            new DriveDistance(0.5, 11, drivetrain),
+            new TurnDegrees(0.5, -100+turnOffset, drivetrain),
+            new DriveDistance(0.5, 8, drivetrain)
         );
     }
 }
